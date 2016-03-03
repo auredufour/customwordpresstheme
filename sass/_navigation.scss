@@ -1,0 +1,42 @@
+header {
+	position: fixed;
+	text-align: center;
+	background-color: $white;
+	left: 0;
+	right: 0;
+	top: 0;
+	margin: 2rem 0;
+	z-index: 200;
+
+}
+.logo{
+		img {
+		display: block;
+		margin: 2rem auto;
+	}
+}
+
+ul.menu {
+	margin: 2rem;
+	padding: 0;
+	text-align: center;
+
+	li {
+		display: inline;
+		margin-right: 10px;
+
+		a {
+			color: $blue;
+			text-decoration: none;
+			padding: 10px;
+			font-size: 1.8rem;
+
+			&:hover {
+				border-bottom: 2px solid $yellow;
+			}
+		}
+		footer a {
+			
+		}
+	}
+}

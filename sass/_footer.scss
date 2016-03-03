@@ -1,0 +1,22 @@
+footer {
+	clear: both;
+	display: block;
+	position: static;
+	border: 2px solid #f0f;
+
+	li {
+		padding: 20px;
+	}
+
+	i {
+		color: $blue;
+		background: $white;
+
+		&:hover {
+			color: $yellow;
+		}
+	a:hover {
+		border: none;
+	}
+	}
+}
