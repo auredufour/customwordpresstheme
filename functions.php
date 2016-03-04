@@ -280,20 +280,12 @@ function get_post_parent($post) {
 	}
 }
 function hackeryou_get_thumbnail_url( $post ) {
-	$imageID = get_post_thumbnail_id( $post->id ); 
+	$imageID = get_post_thumbnail_id( $post->ID ); 
 	$imageURL = wp_get_attachment_url( $imageID );
 	return $imageURL;
 	//want to return the url to be able to do something with it
 }
 
-//Multipost thumbnails link to the plugin 
-if (class_exists('MultiPostThumbnails')) {
-	new MultiPostThumbnails(array(
-	'label' => 'Secondary Image',
-	'id' => 'secondary-image',
-	'post_type' => 'post'
-	 ) );
- }
 
 
 
