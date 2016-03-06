@@ -24,23 +24,25 @@
 				</a>
       			</div>
       			<div class="content-text">
-      			<div class="text-flex">
-					<h2 class="entry-title">
-       					<a href="<?php the_permalink(); ?>" title="Permalink to: <?php esc_attr(the_title_attribute()); ?>" rel="bookmark">
-         		 			<?php the_title(); ?>
-       				 	</a>
-      				</h2>
-      				<?php the_excerpt(); ?></div>
+      				<div class="text-flex">
+      					<div class="flex-container">
+						<h2 class="entry-title">
+       						<a href="<?php the_permalink(); ?>" title="Permalink to: <?php esc_attr(the_title_attribute()); ?>" rel="bookmark">
+         		 				<?php the_title(); ?>
+       					 	</a>
+      					</h2>
+      					<?php the_excerpt(); ?>
 					
 					<?php wp_link_pages( array(
           			'before' => '<div class="page-link"> Pages:',
          			 'after' => '</div>'
         			)); ?>
-				 </div>
+      				</div>
+      				</div>
        			 <div class="content-date">
         			 <p><?php the_date( 'd m' ); ?></p>
-
         		</div>
+				 </div>
 			</section><!-- .entry-content -->
 		</article><!-- #post-## -->
 

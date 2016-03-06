@@ -1,31 +1,21 @@
+/* full-page - wp About
+-----------------------
+*/
+
 .container {
 	display: flex;
+	flex-flow: row wrap;
 	justify-content: space-between;
-			text-align: center;
+	text-align: center;
 
-	p {
-		font-size: 2rem;
-		font-weight: 300;
-		line-height: 4rem;
+	@media (max-width: 650px){
+		flex-flow: column;
 	}
-	h4{
-		color: $yellow;
-		font-size: 3rem;
+
+
+	.content p {
+		flex: 1 0 33%;
+
 	}
 }
 
-.content p {
-	flex: 1 0 33%;
-}
-
-form{
-	width: 100%;
-	font-size: 1.8rem;
-	margin: 2rem auto;
-	
-	span {
-		border: none;
-		width: 100%;
-		outline: none;
-	}
-}	

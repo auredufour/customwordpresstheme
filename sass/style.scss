@@ -44,6 +44,7 @@ html {
 
 img {
 	max-width: 100%;
+	display: block;
 }
 
 body {
@@ -64,6 +65,15 @@ body {
 
 .full {
 	width: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+ul {
+	list-style: none;
+	padding: 0;
 }
 
 

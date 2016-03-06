@@ -9,22 +9,10 @@ p {
 /*blockquotes*/
 
 blockquote {
-	background: $white;
 	margin: 0;
 	padding: 20px;
 	p {
 		margin-top: 0;
-	}
-}
-
-/*tables*/
-
-table {
-	td {
-		padding: 10px;
-	}
-	tr td:first {
-		padding-right: 0;
 	}
 }
 
@@ -46,46 +34,126 @@ ul li, ol li {
 	padding: 3px;
 }
 
-/*PRE*/
-
-pre {
-	background: #F7F7F7;
-	padding: 10px;
-	border-radius: 4px;
-	border: 1px solid #ccc;
-}
-
-
 /*
+
 ====================================
-Global Classes / Wordpress Specific
+SPECIFIC THEME
 ====================================
 */
 
-.aligncenter {
+h1 {
+	font-size: 6rem;
+	margin: 22rem auto 8rem;
+	color: $white;
+	@media (max-width: 600px){
+		font-size: 5rem;
+	}
+}
+
+h2 {
+	font-size: 3.6rem;
+	line-height: 3.6rem;
+	@media (max-width: 600px){
+		font-size: 3rem;
+	}
+}
+
+h3 {
+	font-size: 2.4rem;
+}
+
+h4 {
+ 	font-size: 3.5rem;
+}
+
+a, i {
+	color: $blue;
+}
+
+p {
+ 	font-size: 2rem;
+ 	font-family: 'Roboto';
+}
+
+footer {
+	font-size: 1.6rem;
+}
+
+// FRONT PAGE 
+
+.content-text, .featureImagecontainer, .entry-meta, h1, h2, h3, h4{
+ 	font-family: "Butler";
+}
+.menu-content p{
+	font-family: "Roboto";
+}
+
+.featureImagecontainer, .overlay, .hero-container{
+	color: $white;
+
+	p {
+		font-size: 8rem;
+	}
+
+	p:nth-child(1), p:nth-child(6) {
+		color: $blue;
+	}
+}
+
+
+.container {
+	h2 {
+		color: $blue;
+	}
+
+	p {
+		font-weight: 300;
+		line-height: 4rem;
+	}
+
+	h4 {
+		color: $yellow;
+	}
+}
+
+.container .content-date {
+	p {
+		margin: 4rem 0;
+		color: $grey;
+		line-height: 7rem;				
+		font-size: 7rem;
+	}
+}
+
+header a {
+	font-size: 1.8rem;
+}
+
+.hero-container {
 	text-align: center;
-	margin: 0 auto;
 }
 
-.alignleft {
-	float: left;
+h1.front-page {
+	text-transform: uppercase;
+	margin: 2rem 0 18rem;
 }
 
-.alignright {
-	float: right;
+.sidebar, .post {
+	font-size: 1.8rem;
+	font-weight: 300;
 }
 
-img {
-	&.alignleft {
-		padding-right: 5px;
-	}
-	&.alignright {
-		padding-left: 5px;
-	}
+.post {
+	line-height: 3rem;
 }
 
-.clear {
-	width: 100%;
-	float: left;
-	clear: both;
+.post .partTwo blockquote p {
+	font-weight: 400;
+	font-size: 2.4rem;
+	font-style: italic;
+	font-family: "Butler";
 }
+.entry-meta {
+	font-size: 1.6rem;
+}
+

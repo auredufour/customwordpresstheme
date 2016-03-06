@@ -1,212 +1,172 @@
-.main{
+/* index - wp blog page
+-----------------------
+*/
+
+.main {
 	margin: 6rem 0;
-	
 }
+
 .container {
 	display: flex;
 	flex-flow: row wrap;
 	align-items: flex-top;
 	margin: 0 3rem 1rem 0;
-	text-align: left;
-	
-	.content-text {
-		padding: 2rem;
-	}
 
-	article{
+	article {
 		margin: 4rem 0;
-
 	}
 
-	.image-content{
+	.image-content {
 		position: relative;
-
-		.background:nth-child(2){
-			background: rgba(0,0,0,0.2);
-			position: absolute;
-			top: 0;
-			right: 0;
-			bottom: 0;
-			left: 0;	
-		}
-
-		img{
-			display: block;
-		}
 	}
 
-	h2 {
-		color: $blue;
-		font-size: 3.6rem;
-		font-family: 'Butler';
-		// position: absolute;
-		// bottom:0;
-  		// left: 50%;
- 		// transform: translateX(-50%);
-}
-		a {
-			text-decoration: none;
-			color: $blue;
+	section {
+		display: flex;
+		flex-flow: row wrap;
+		position: relative;
+		@media (max-width: 800px){
+			flex-flow: column wrap;
+ 		}
+	}
+	.content-text, .image-content {
+		@media (max-width: 600px){
+ 			flex: 1 0 100%;
+ 		}
+	}
 
-		}
-		p{
-			font-family: 'Roboto';
-		}
-	
+	.content-text {
+		display: flex;
+		position: relative;
+	}
+
+	.content-date, .content-text {
+		margin: 0;	
+	}
+
 	#post-42 {
 		section {
-			display: flex;
-			flex: 1 0 100%;
-			text-align: left;
 			margin: 0 3rem 3rem 0;
-			position: relative;
 			align-items: flex-end;
-			}
-
-		.image-content{
-			flex: 1 0 50%;
 		}
-		.content-text{
-			flex: 1 0 40%;
-			position: relative;	
-			text-align: right;	
-			margin: 0;	
 
+		.image-content {
+			flex: 1 0 47%;
+		}
+
+		.content-text{
+			flex: 1 0 53%;
+			text-align: right;	
+		
+		.text-flex{
+			padding-right: 2rem;
+			flex: 1 0 80%;
 		}
 
 		.content-date {
-			flex: 1 0 10%;
-			font-size: 8rem;
-			font-family: "Butler";
-			border-left: 1px solid $yellow;
-			margin: 0;
-			padding-left: 3rem;
-
-			p {
-				margin:4rem 0;
-				text-align: right;
-				color: $grey;
-				font-size: 7rem;
-				line-height: 7rem;
-			}
+			flex: 1 0 20%;
+			p{
+			border-left: 1px solid $yellow;}
 		}
+	}
 	}
 
 	#post-40{
 		section {
-			display: flex;
-			flex: 1 0 100%;
 			margin: 0 3rem 3rem 0;
-			position: relative;
 			align-items: center;
-			}
+		}
 
 		.image-content{
 			flex: 1 0 60%;
 			order: 5;
 		}
+		
 		.content-text{
-			flex: 1 0 30%;
-			position: relative;	
-			text-align: right;	
-			margin: 0;	
+			flex: 1 0 40%;
 			order: 3;
 
-			.text-flex{
-				position: absolute;
-				left: 3rem;
-				width: 150%;
-				bottom: -10rem;
-				text-align: left;
-			}
+		.flex-container {
+			flex: 1 0 80%;
+			padding-left: 2rem;
+			width: 150%;
+			text-align: left;
+			@media (max-width: 800px){
+				width: 100%;
+ 		}
 		}
+		
 		.content-date {
-			flex: 1 0 10%;
-			font-size: 8rem;
-			font-family: "Butler";
-			border-right: 1px solid $yellow;
-			margin: 0;
-			padding-right: 3rem;
-			order: 1;
+			flex: 1 0 20%;
+			order: -1;
 
 			p {
-				margin:4rem 0;
+				padding-right: 2rem;
+				border-right: 1px solid $yellow;
 				text-align: right;
-				color: $grey;
-				line-height: 7rem;
-				font-size: 7rem;
-
+				}
 			}
 		}
 	}
 
 	#post-36 {
-			top: -13rem;
-			position: relative;
+		top: -8rem;
+		position: relative;
 			
-			section {
-			display: flex;
-			flex: 1 0 100%;
+		section {
 			margin: 0 3rem 3rem 0;
 			align-items: center;
-			}
+		}
 
 		.image-content{
 			flex: 1 0 35%;
 			position: relative;
-
 		}
+		.flex-container{
+			flex: 1 0 80%;
+			text-align: right;
+			padding-right: 2rem;
+		}
+
 		.content-text{
 			flex: 1 0 55%;
-			position: relative;	
-			text-align: right;	
-			margin: 0;	
-
+			display: flex;
 		}
+
 		.content-date {
 			flex: 1 0 10%;
-			font-size: 8rem;
-			font-family: "Butler";
-			margin: 0;
 
 			p {
 				border-left: 1px solid $yellow;
-				padding-left: 3rem;
-				margin:4rem 0;
+				padding-left: 2rem;
 				text-align: right;
-				color: $grey;
-				font-size: 7rem;
-				line-height: 7rem;
 			}
 		}
 	}
 
 	#post-38{
-			top: -13rem;
-			position: relative;
+		top: -13rem;
+		position: relative;
+
 		section {
-			display: flex;
-			flex: 1 0 100%;
 			margin: 0 3rem 3rem 0;
-			position: relative;
 			align-items: flex-start;
-			}
+		}
 
 		.image-content{
 			flex: 1 0 45%;
 			order: 5;
 		}
+
 		.content-text{
-			padding: 0 2rem;
-			margin: 0;
 			flex: 1 0 45%;
-			position: relative;	
-			text-align: right;	
-			margin: 0;	
+			padding: 0 2rem;
 			order: 3;
 
 			h2 {
 				margin-top: 0;
+			}
+			.flex-container{
+				padding-left: 2rem;
 			}
 
 			.text-flex{
@@ -215,99 +175,77 @@
 		}
 		.content-date {
 			flex: 1 0 10%;
-			font-size: 8rem;
-			font-family: "Butler";
+			order: -1;
+			p{
+			padding-right: 2rem;
 			border-right: 1px solid $yellow;
-			margin: 0;
-			padding-right: 3rem;
-			order: 1;
-
-			p {
-				margin:4rem 0;
-				text-align: right;
-				color: $grey;
-				line-height: 7rem;
-				font-size: 7rem;
 
 			}
 		}
 	}
-
 	
 	#post-34 {
 		top: -13rem;
 		position: relative;
 
 		section {
-			display: flex;
-			flex: 1 0 100%;
-			text-align: left;
 			margin: 0 3rem 3rem 0;
-			position: relative;
 			align-items: flex-top;
-			}
+		}
 
 		.image-content{
 			flex: 1 0 70%;
 		}
+
 		.content-text{
 			flex: 1 0 20%;
-			position: relative;	
-			text-align: right;	
-			margin: 0;	
 
-			.text-flex{
+			.flex-container{
+				text-align: right;
+				padding-right: 2rem;
 				position: absolute;
 				right: 0;
-				top: 0;
+				width: 300%;
 				padding-right: 2rem;
-				width: 250%;
+					@media (max-width: 800px){
+				width: 100%;
+ 		}
+			}
+
+			.text-flex{
+				position: relative;
+				flex: 1 0 60%;
 				text-align: right;
-				border-right: 1px solid $yellow;
 			}
 		}
 
 		.content-date {
-			flex: 1 0 10%;
-			font-size: 8rem;
-			font-family: "Butler";
-			margin: 0;
+			flex: 1 0 20%;
 
 			p {
-			padding-left: 3rem;
-				margin:4rem 0;
-				text-align: right;
-				color: $grey;
-				line-height: 7rem;				
-				font-size: 7rem;
-
+				border-left: 1px solid $yellow;
+				padding-left: 2rem;
 			}
 		}
 	}
 
 	#post-89 {
+		top: -13rem;
+		position: relative;
 
-			top: -13rem;
-			position: relative;
 		section {
-			display: flex;
-			flex: 1 0 100%;
 			margin: 0 3rem 3rem 0;
-			position: relative;
 			align-items: flex-end;
-			}
+		}
 
 		.image-content{
 			flex: 1 0 45%;
 			order: 5;
 		}
+
 		.content-text{
-			padding: 0 2rem;
-			margin: 0;
 			flex: 1 0 45%;
-			position: relative;	
-			text-align: right;	
-			margin: 0;	
+			padding: 0 2rem;
 			order: 3;
 
 			h2 {
@@ -320,20 +258,12 @@
 		}
 		.content-date {
 			flex: 1 0 10%;
-			font-size: 8rem;
-			font-family: "Butler";
-			border-right: 1px solid $yellow;
-			margin: 0;
-			padding-right: 3rem;
-			order: 1;
+			padding-right: 2rem;
+			order: -1;
 
 			p {
-				margin:4rem 0;
-				text-align: right;
-				color: $grey;
-				line-height: 7rem;
-				font-size: 7rem;
-
+				border-right: 1px solid $yellow;
+				padding-right: 2rem;
 			}
 		}
 	}

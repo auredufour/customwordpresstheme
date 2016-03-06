@@ -1,53 +1,52 @@
-.post{
-	p {
-		font-size: 1.8rem;
-		font-weight: 300;
-		line-height: 3rem;
-
-	}
+.post {
 	.entry-content {
 		display: flex;
+		flex-flow: row wrap;
 		margin: 4rem 0;
-}
+		@media (max-width: 650px){
+		flex-flow: column;
+		}
+
+	}
 	
 	.partOne, .partTwo {
 		flex: 1 0 calc(50% - 5rem);
 		position: relative;
-		font-size: 1.8rem;
-		font-weight: 300;
-		line-height: 3rem;
-	
-		span {
-			color: $yellow;
+
+		@media (max-width: 650px){
+			flex: 1 0 100;
 		}
+
 	}
 
 	.partOne {
 		margin: 0 5rem 0 0;
-		text-indent: 4rem;
-	}
-}
-
-.post .partTwo blockquote p {
-		font-weight: 400;
-		font-size: 2.4rem;
-		font-style: italic;
-		font-family: "Butler";
-		border-left: 1px solid $yellow;
-		padding: 2rem;
-		position: relative;
-		left: -2rem;
-	}
-	.entry-meta {
-		font-size: 1.6rem;
-		font-family: "Butler";
-		margin: 3rem 0;
-		a {
-			color: $yellow;
-			text-decoration: none;
-			font-size: 1.8rem;
+		text-indent: 3rem;
+		@media (max-width: 650px){
+			margin: 0;
 		}
 	}
+
+	.partTwo blockquote p {
+		position: relative;
+		left: -2rem;
+		padding: 2rem;
+		@media (max-width: 650px){
+			border-left: 1px solid transparent;
+			border-top: 1px solid $yellow;
+			text-align: center;
+		}
+	}
+	.entry-meta, #nav-below, .nav-previous {
+		a {
+		color: $yellow;
+		font-size: 1.8rem;
+		}
+	}
+	.entry-meta {
+		margin: 3rem 0;
+	}
+
 	#nav-below {
 		display: flex;
 		justify-content: space-between;
@@ -55,12 +54,10 @@
 
 		.nav-previous, .nav-next {
 			flex: 1 0 20%;
-			a {
-				text-decoration: none;
-				color: $yellow;
-			}
 		}
 	}
+	
 	#nav-below .nav-previous {
 		text-align: left;
 	}
+}

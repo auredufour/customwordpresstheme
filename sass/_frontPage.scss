@@ -1,72 +1,71 @@
-.wrapper {
-	margin-top: 14rem;
-}
+/* Front page Style - wp Home Page
+----------------------------------
+*/
 
- .content-text {
+.content-text {
  	margin: 6rem 0;
- 	font-size: 2rem;
  	text-align: center;
- 	font-family: "Butler";
- }
-
- .menu-content{
-
- 	display: flex;
- 	flex-flow: row wrap;
- 	border-top: 0.5px solid $yellow;
- 	border-bottom: 0.5px solid $yellow;
-
- 	p {
- 		flex: 1 0 33.3%;
- 		font-size: 2rem;
- 		font-family: "Roboto";
- 		font-weight: light;
- 	}
- }
-
- h4 {
- 		font-family: "Butler";
+ 	
+ 	h4 {
  		margin: 0;
- 		font-size: 4rem;
 		margin: 5rem 0;
- 		}
-
- .content-image {
- 	width: 100%;
- 	margin: 2rem auto;
- 	display: flex;
- 	flex-flow: wrap row;
- 	align-items: center;
-
- 	.featureImagecontainer {
-		position: relative;
-
-		p {
-			display: none;
-			font-size: 8rem;
-			margin: 0;
- 			font-family: "Butler";
- 			position: absolute;
- 			color: $white;
-			padding: 0 2rem;
- 
+		@media (max-width: 600px){
+			margin: 5rem;
 		}
 
-		img {
- 			width: 100%;
- 			display: block;
- 		}
  	}
+
+	.menu-content {
+ 		display: flex;
+ 		flex-flow: row wrap;
+ 		border-top: 0.5px solid $yellow;
+ 		border-bottom: 0.5px solid $yellow;
+
+ 		p {
+ 			flex: 1 0 33.3%;
+ 	
+ 		@media (max-width: 600px){
+ 			flex: 1 0 50%;
+ 			}
+ 		}
+
+ 	}
+
+ 	.content-image {
+	 	margin: 2rem auto;
+	 	display: flex;
+	 	flex-flow: wrap row;
+	 	align-items: center;
+
+	 		@media (max-width: 600px){
+	 			flex-flow: wrap column;
+			}
+	
+ 		.featureImagecontainer {
+			position: relative;
+
+			p {
+				display: none;
+				margin: 0;
+				padding: 0 2rem;
+ 				position: absolute;
+			}
+
+			img {
+ 				width: 100%;
+ 				display: block;
+ 			}
+ 		}
+ 	
 	.featureImagecontainer:first-child {
 		flex: 1 0 calc(45% - 2rem);
 		margin-right: 2rem;
-
+	
 		p:nth-child(1){
-			color: $blue;
 			display: block;
 			border-left: 1px solid $yellow;
-			right: 0;
 			top: 3rem;
+			right: 0;
 		}
 	}
 
@@ -77,88 +76,113 @@
 			display: block;
 			border-right: 1px solid $yellow;
 			top: 50%;
-			font-size: 7.5rem;
-
+			@media (max-width: 700px){
+	 			top: 30%;
+			}
 		}
 	}
 
 	.featureImagecontainer:nth-child(3){
 		flex: 1 0 calc(60% - 2rem);
 		margin: 2rem 2rem 0 0;
+
 		p:nth-child(3){
 			display: block;
-			left: 60%;
-			top: 25%;
 			border-left: 1px solid $yellow;
+			top: 25%;
+			left: 60%;
 		}
 	}
 
 	.featureImagecontainer:nth-child(4){
 		flex: 1 0 40%;
+
 		p:nth-child(4){
 			display: block;
+			border-right: 1px solid $yellow;
 			top: 38%;
 			left: 23%;
-			font-size: 7rem;
-			border-right: 1px solid $yellow;
+			@media (max-width: 700px){
+	 			top: 25%;
+			}
 		}
 	}
+
 	.featureImagecontainer:nth-child(5){
 		flex: 1 0 calc(50% - 2rem);
 		margin: 2rem 2rem 0 0;
+
 		p:nth-child(5){
 			display: block;
-			bottom: 1.5rem;
 			border-right: 1px solid $yellow;
+			bottom: 1.5rem;
 		}
-
 	}
+
 	.featureImagecontainer:nth-child(6){
 		flex: 1 0 50%;
 		margin-top: 5.5rem;
+
 		p:nth-child(6){
 			display: block;
-			color: $blue;
 			border-right: 1px solid $yellow;
 			left: 60%;
 			top: 60%;
+			@media (max-width: 700px){
+	 			top: 40%;
+			}
 		}
 	}
+	.featureImagecontainer:first-child, .featureImagecontainer:nth-child(2), .featureImagecontainer:nth-child(3), .featureImagecontainer:nth-child(4), .featureImagecontainer:nth-child(5), .featureImagecontainer:nth-child(6) {
+		@media (max-width: 600px){
+	 		flex: 1 0 100%;
+			margin: 2rem 0;
+			}
+ 	}
 
  	.overlay {
  		opacity: 0;
  		transition: 0.5s;
+
  		h4 {
- 			font-family: "Butler";
- 			position: absolute;
- 			font-size: 4rem;
  			margin: 0;
- 			left: 50%;
+ 			position: absolute;
  			top: 50%;
+ 			left: 50%;
 			transform: translate(-50%,-50%);
-			color: $white;
  		}
+
  		h4:first-child{
+ 			border-bottom: 1px solid $yellow;
  			top: 43%;
  			left: 45%;
- 			border-bottom: 1px solid $yellow;
+ 		@media (max-width: 950px){
+			top: 40%;
+		}
  		}
+
  		h4:nth-child(2){
  			top: 58%;
  			left: 55%;
+ 		@media (max-width: 950px){
+			top: 60%;
+		}
  		}
  	}
+
  	.featureImagecontainer:hover .overlay {
  		opacity: 1;
- 		background: rgba(44, 48, 62, 0.8);	
  		position: absolute;
- 		z-index: 100;
  		top: 0rem;
  		right: 0rem;
  		bottom: 0rem;
  		left: 50%;
+ 		z-index: 100;
+ 		background: rgba(44, 48, 62, 0.8);	
  	}
+
  	.featureImagecontainer:hover p{
 		opacity: 0;
  	}
- }
+ 	}
+}
