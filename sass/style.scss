@@ -11,13 +11,20 @@ $yellow: #DA9D3A;
 $white: #F5F5F5;
 $grey: #41403C;
 
+@font-face {
+	font-family: Butler;
+	src: url(font/Butler_Regular.otf);
+}
+
 @import 'normalize';
 @import 'typography';
-@import 'frontPage';
 @import 'navigation';
+@import 'frontPage';
 @import 'sidebar';
 @import 'index';
 @import 'comments';
+@import 'page';
+@import 'single';
 @import 'footer';
 /*
 ====================================
@@ -29,14 +36,10 @@ html {
 	background: $white;
 }
 
-.wrapperNavFooter , .wrapper {
+.wrapper {
 	max-width: 1200px;
 	padding: 0 2rem;
-	margin: 0 auto;
-}
-
-.wrapper {
-	margin: 14rem auto;
+	margin: 8rem auto 3rem;
 }
 
 img {

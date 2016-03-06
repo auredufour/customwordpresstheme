@@ -49,6 +49,7 @@ function hackeryou_styles(){
 	wp_enqueue_style('style', get_stylesheet_uri() );
 	wp_enqueue_style('fontawesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css');
 	wp_enqueue_style('googlefont', 'https://fonts.googleapis.com/css?family=Roboto:400,300,500,700|Lora:400,700" rel="stylesheet');
+	wp_enqueue_style('googlefont', 'https://fonts.googleapis.com/css?family=Montserrat|League+Script|Cutive+Mono');
 }
 
 add_action( 'wp_enqueue_scripts', 'hackeryou_styles');
@@ -129,7 +130,7 @@ add_filter( 'wp_page_menu_args', 'hackeryou_page_menu_args' );
  * Sets the post excerpt length to 40 characters.
  */
 function hackeryou_excerpt_length( $length ) {
-	return 40;
+	return 10;
 }
 add_filter( 'excerpt_length', 'hackeryou_excerpt_length' );
 
@@ -144,7 +145,7 @@ function hackeryou_continue_reading_link() {
  * Replaces "[...]" (appended to automatically generated excerpts) with an ellipsis and hackeryou_continue_reading_link().
  */
 function hackeryou_auto_excerpt_more( $more ) {
-	return ' &hellip;' . hackeryou_continue_reading_link();
+	return ' &hellip;' ;
 }
 add_filter( 'excerpt_more', 'hackeryou_auto_excerpt_more' );
 
@@ -285,7 +286,12 @@ function hackeryou_get_thumbnail_url( $post ) {
 	return $imageURL;
 	//want to return the url to be able to do something with it
 }
-
+add_filter('widget_tag_cloud_args','set_tag_cloud_sizes');
+function set_tag_cloud_sizes($args) {
+$args['smallest'] = 14;
+$args['largest'] = 14;
+return $args; 
+}
 
 
 

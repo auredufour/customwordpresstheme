@@ -1,24 +1,41 @@
 footer {
-	display: block;
-	position: static;
+	text-align: center;
+
 	font-size: 1.6rem;
-	display: flex;
-	text-align: center;r
 
+	.wrapperNavFooter {
+		display: flex;
+		flex-flow: column wrap;
+		align-item: space-around;
+		padding: 2rem 0 0;
+	}
 
-	li {
-		padding: 20px;
+	.menu-social-menu-container, p {
+		margin: 0 auto;
+	}
+
+	ul {
+		list-style: none;
+		display: flex;
+	}
+	li{
+		padding: 0;
+		padding: 2rem;
 	}
 
 	i {
 		color: $blue;
 		background: $white;
+		font-size: 2rem;
 
 		&:hover {
 			color: $yellow;
+			border-bottom: 1px solid transparent;
 		}
-	a:hover {
+	a {
+		text-align: center;
 		border: none;
 	}
-	}
+	
+}
 }

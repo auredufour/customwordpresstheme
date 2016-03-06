@@ -1,10 +1,92 @@
-.sidebar {
-	width: 30%;
-	ul {
+
+	.sidebar {
+		width: 100%;
+		border-top: 1px solid $yellow;
+		border-bottom: 1px solid $yellow;
+		font-size: 1.8rem;
+		padding: 2rem 0 3rem;
+
+	ul.xoxo {
+		display: flex;
+		justify-content: space-between;
 		margin: 0;
 		padding: 0;
-		li {
-			list-style: none;
+		font-size: 1.6rem;
+		padding: 0;
+		font-weight: 300;
+
+		#categories-2{
+			flex: 1 0 20%;
 		}
+
+		li {
+			flex: 1 0 30%;
+			text-align: center;
+			list-style: none;
+			color: $blue;
+			padding: 0.6rem;
+			font-size: 1.8rem;
+			a{
+				text-decoration: none;
+			}
+		}
+
+			h3 {
+				font-family: "Butler";
+				font-size: 2.4rem;
+			}
+			}
+			#recent-posts-2, #categories-2{
+			a{
+				text-decoration: none;
+				color: $blue;
+				border: 1px solid transparent;
+				&:hover {
+					border-bottom: 1px solid $yellow;
+				}
+
+			}
+		}
+		}
+		ul {
+			padding: 0;
+		}
+		.tagcloud{
+			display: flex;
+			flex-flow: row wrap;
+			justify-content: space-between;
+
+			a {
+				flex: 1 0 calc(33.3% - 1rem);
+				border: 1px solid $yellow;
+				padding: 1rem 0.5rem;
+				margin: 0.5rem;
+				color: $yellow;
+				transition: 0.5s;
+
+				&:hover {
+				color: $white;
+				background: $yellow;
+
+
+				}
+
+		}
+	
+		// 	.fixed {
+	 //    	position: fixed;
+	 //    	top: 1rem;
+	 //    	z-index: 100;
+		// }
 	}
-}
+	#search-2 input[type=submit], input[type=search]{
+		width: 100%;
+	}
+	#pages-2 ul{
+		display: flex;
+		flex-flow: wrap row;
+		align-items: space-around;
+	}
+	.page-item {
+		flex: 1 0 50%;
+	}
